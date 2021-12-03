@@ -1,11 +1,22 @@
 :root {
     --white: #fff;
     --black:#000;
+    --opaque-black:#000000cc;
 }
 
 @font-face {
     font-family: montserrat;
     src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: special-elite;
+    src: url(/fonts/SpecialElite-Regular.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(/fonts/Roboto-Regular.ttf);
 }
 
 html {
@@ -81,15 +92,73 @@ input[type="checkbox"] {
 }
 
 .email-popup-window {
-    background: var(--black);
+    background: var(--opaque-black);
+    width: 100%;
+    height: 100%;
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.email-popup-inner {
+    display: block;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 520px;
+    background: var(--white);
+    opacity: unset;
+    opacity: 1;
+    text-align: center;
+    color: var(--black);
+    font-family: special-elite;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 11.25px;
+}
+
+.email-popup-inner h2 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.email-popup-inner p {
+    font-size: 18px;
+    padding: 0 10%;
+}
+
+.email-popup-inner p:nth-child(3) {
+    font-weight: 700;
+}
+
+.email-popup-inner div {
+    display: block;
+    margin: 0 10% 5px;
+    width: 80%;
+    color: var(--white);
+    padding: 10px;
+    font-family: roboto;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.email-popup-inner div svg {
+    font-size: 25px;
+    height: 25px;
+    float: left;
+}
+
+.spotify-button {
+    background: #1db954;
+}
+
+.youtube-button {
+    background: #bb0000;
 }
 
 input[type="checkbox"]:checked + .email-popup-window {
-    display: block;
-    position: absolute;
-    top: 200px;
-    margin: 0 auto;
+   display: block;
+
 }
 
 @media (min-width:990px) {
