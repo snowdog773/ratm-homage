@@ -1,0 +1,107 @@
+:root {
+    --white: #fff;
+    --black:#000;
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+html {
+    font-family: montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.375;
+}
+
+body {
+    box-sizing: border-box;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+header .header-wrapper {
+    background: var(--black);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+}
+
+h1 {
+
+    height: 0;
+    overflow: hidden;
+}
+
+header .h1-wrapper {
+    display: block;
+    background: url(/assets/header-ratm-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 187.5px;
+    height: 47.198px;
+}
+
+header ul {
+    display: none;
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: .9375rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+li {
+    display: inline-block;
+    padding: 0 17.5px;
+}
+
+label {
+    display: block;
+}
+
+input[type="checkbox"] {
+    height: 0;
+    overflow: hidden;
+}
+
+.email-popup-window {
+    background: var(--black);
+    display: none;
+}
+
+input[type="checkbox"]:checked + .email-popup-window {
+    display: block;
+    position: absolute;
+    top: 200px;
+    margin: 0 auto;
+}
+
+@media (min-width:990px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    header ul {
+        display: block;
+    
+    }
+    
+
+}
