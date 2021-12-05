@@ -161,6 +161,12 @@ input[type="checkbox"]:checked + .email-popup-window {
 
 }
 
+form input {
+    display: block;
+    margin: 0 10%;
+    width: 80%;
+}
+
 @media (min-width:990px) {
 
     html {
