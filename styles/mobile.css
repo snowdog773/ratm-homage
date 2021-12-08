@@ -101,45 +101,70 @@ input[type="checkbox"] {
     left: 0;
 }
 
-.email-popup-inner {
-    display: block;
-    margin: 40px auto;
-    width: 100%;
-    max-width: 520px;
+div.email-popup-outer {
+    position: relative;
+    margin: 20px auto;
+    max-width: 500px;
+    background: var(--white);
+    opacity: unset;
+    opacity: 1;
+    padding: 11.25px;
+}
+
+div.email-popup-inner {
+    position: relative;
     background: var(--white);
     opacity: unset;
     opacity: 1;
     text-align: center;
     color: var(--black);
     font-family: special-elite;
-    height: 100%;
+    max-height: 90vh;
     overflow-y: scroll;
-    padding: 11.25px;
 }
 
-.email-popup-inner h2 {
+p.close-button {
+    z-index: 10;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    left: 5px;
+    top: -45px;
+    overflow: visible;
+}
+
+
+
+.email-popup-inner .margin-set {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+div.email-popup-inner h2 {
     font-size: 30px;
     font-weight: bolder;
 }
 
 .email-popup-inner p {
     font-size: 18px;
-    padding: 0 10%;
 }
 
 .email-popup-inner p:nth-child(3) {
     font-weight: 700;
 }
 
-.email-popup-inner div {
+.spotify-button, .youtube-button, .subscribe-button {
     display: block;
-    margin: 0 10% 5px;
-    width: 80%;
+    margin-bottom: 5px;
+    width: 100%;
     color: var(--white);
     padding: 10px;
     font-family: roboto;
     font-size: 18px;
     font-weight: 700;
+    border-radius: 3px;
 }
 
 .email-popup-inner div svg {
@@ -162,9 +187,79 @@ input[type="checkbox"]:checked + .email-popup-window {
 }
 
 form input {
-    display: block;
-    margin: 0 10%;
-    width: 80%;
+    width: 100%;
+    font-size: 18px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 5px;
+    padding: 6px 12px;
+    margin: 5px 0;
+}
+
+
+
+form > label {
+    text-align: left;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.email-popup-window span.red-star {
+    color: #dc3545;
+}
+
+.checkbox-wrapper {
+    background-color: rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    background: grey;
+}
+
+.checkbox-wrapper .checkbox-text {
+    font-size: 16px;
+    margin: 10px 0 20px;
+    padding: unset;
+    width: 300px;
+}
+
+.subscribe-button {
+    background: #990000;
+    font-size: 20px;
+}
+
+p.exclude-margin {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+
+.email-popup-footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: var(--black);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 11.2px;
+    padding: 8px 0;
+}
+
+.email-popup-footer p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 11.2px;
+}
+
+.email-popup-footer a {
+    font-weight: 700;
+    font-size: 11.2px;
 }
 
 @media (min-width:990px) {
