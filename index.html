@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/styles/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/email_popup.css" />
     <title>My Home - Rage Against The Machine Official Site</title>
 
 
@@ -36,72 +37,80 @@
             <div class="h1-wrapper">
                 <h1>Rage Against The Machine</h1>
             </div>
+            
             <nav>
+                <input type="checkbox" id="nav-link" name="nav-link" hidden />
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Music</a></li>
-                    <li><a href="">Videos</a></li>
-                    <li><a href="">Photos</a></li>
-                    <li><a href="">Bio</a></li>
-                    <li><a href="">Merch</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">Bio</a></li>
+                    <li><a href="#">Merch</a></li>
                 </ul>
             </nav>
-            <div class="email-list">
-                
-                <label for="email">
-                    <img src="/assets/envelope.svg" />
-                </label>
-                <input id="email" name="email" type="checkbox" />
-                <div class="email-popup-window">
-                    <div class="email-popup-outer">
-                        <label for="email"><p class="close-button">X</p></label>
-                        <div class="email-popup-inner">
-                            
-                            <div class="margin-set">
-                                <h2>Get Email Updates</h2>
-                                <p>Be among the first to know when new and special offers become available</p>
-                                <p>QUICK SIGN UP WITH:</p>
-                                <div class="spotify-button">
-                                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="spotify" class="svg-inline--fa fa-spotify" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"></path></svg>
-                                    <span>SPOTIFY</span>
+            <div class="icon-wrapper">
+                <div class="email-list">              
+                    <label for="email">
+                        <img src="/assets/envelope.svg" />
+                    </label>
+                    <input id="email" name="email" type="checkbox" />
+                    <div class="email-popup-window">
+                        <div class="email-popup-outer">
+                            <label for="email"><p class="close-button">X</p></label>
+                            <div class="email-popup-inner">
+                                
+                                <div class="margin-set">
+                                    <h2>Get Email Updates</h2>
+                                    <p>Be among the first to know when new and special offers become available</p>
+                                    <p>QUICK SIGN UP WITH:</p>
+                                    <div class="spotify-button">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="spotify" class="svg-inline--fa fa-spotify" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"></path></svg>
+                                        <span>SPOTIFY</span>
+                                        </div>
+                                    <div class="youtube-button">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube-square" class="svg-inline--fa fa-youtube-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"></path></svg>
+                                        <span>YOUTUBE</span>
                                     </div>
-                                <div class="youtube-button">
-                                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube-square" class="svg-inline--fa fa-youtube-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"></path></svg>
-                                    <span>YOUTUBE</span>
+                                    <form>
+                                        <label for="email" >Email Address <span class="red-star">&#128950;</span></label>
+                                        <input id="email" type="email" />
+                                        <label for="name" >First Name <span class="red-star">&#128950;</span></label>
+                                        <input id="name" type="text" />
+                                        <label for="post-code" >Postal Code <span class="red-star">&#128950;</span></label>
+                                        <input id="post-code" type="text" />
+                                        <label for="country" >Country <span class="red-star">&#128950;</span></label>
+                                        <input id="country" type="country" />
+                                        <div class="checkbox-wrapper">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="newsletter" name="newsletter" checked />
+                                            </div>
+                                            <div class="checkbox-text">
+                                                <label for="newsletter">I'd like to subscribe to the Rage Against The Machine newsletter</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="subscribe-button">SUBSCRIBE</div>
                                 </div>
-                                <form>
-                                    <label for="email" >Email Address <span class="red-star">&#128950;</span></label>
-                                    <input id="email" type="email" />
-                                    <label for="name" >First Name <span class="red-star">&#128950;</span></label>
-                                    <input id="name" type="text" />
-                                    <label for="post-code" >Postal Code <span class="red-star">&#128950;</span></label>
-                                    <input id="post-code" type="text" />
-                                    <label for="country" >Country <span class="red-star">&#128950;</span></label>
-                                    <input id="country" type="country" />
-                                    <div class="checkbox-wrapper">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="newsletter" name="newsletter" checked />
-                                        </div>
-                                        <div class="checkbox-text">
-                                            <label for="newsletter">I'd like to subscribe to the Rage Against The Machine newsletter</label>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="subscribe-button">SUBSCRIBE</div>
-                            </div>
-                            <p class="exclude-margin"><span class="red-star">&#128950;</span> Denotes a required field</p>
-                            <div class="email-popup-footer">
-                                <p> &copy; 2021
-                                <a href="#">SONY MUSIC ENTERTAINMENT</a></p>
-                                <p><a href="#">TERMS OF SERVICE</a> |
-                                <a href="#">PRIVACY POLICY</a> |
-                                <a href="#">HOW WE USE YOUR DATA</a> |</p><p>
-                                <a href="#">YOUR CALIFORNIA PRIVACY RIGHTS</a> |
-                                <a href="#">DO NOT SELL MY PERSONAL INFORMATION</a> |</p>
+                                <p class="exclude-margin"><span class="red-star">&#128950;</span> Denotes a required field</p>
+                                <div class="email-popup-footer">
+                                    <p> &copy; 2021
+                                    <a href="#">SONY MUSIC ENTERTAINMENT</a></p>
+                                    <p><a href="#">TERMS OF SERVICE</a> |
+                                    <a href="#">PRIVACY POLICY</a> |
+                                    <a href="#">HOW WE USE YOUR DATA</a> |</p><p>
+                                    <a href="#">YOUR CALIFORNIA PRIVACY RIGHTS</a> |
+                                    <a href="#">DO NOT SELL MY PERSONAL INFORMATION</a> |</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="hamburger">
+                    <label for="nav-link">
+                        <img src="assets/bars-solid.svg" />
+                    </label>
                 </div>
             </div>
         </div>
