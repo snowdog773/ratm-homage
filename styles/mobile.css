@@ -10,9 +10,15 @@
 }
 
 @font-face {
+    font-family: montserrat-bold;
+    src: url(/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
     font-family: special-elite;
     src: url(/fonts/SpecialElite-Regular.ttf);
 }
+
 
 @font-face {
     font-family: roboto;
@@ -63,9 +69,8 @@ header .h1-wrapper {
     height: 47.198px;
 }
 
-header ul {
+div.nav-list {
     display: none;
-    list-style: none;
 
 }
 
@@ -78,10 +83,6 @@ a {
     text-transform: uppercase;
 }
 
-li {
-    display: inline-block;
-    padding: 0 17.5px;
-}
 
 header .icon-wrapper {
     display: flex;
@@ -107,16 +108,53 @@ header .hamburger img {
 
 
 input[type="checkbox"] {
-    height: 0;
+    height: 10px;
     overflow: hidden;
 }
 
 
-input[type="checkbox"]:checked ~ header ul {
+input[type="checkbox"]:checked + div.nav-list {
     display: block;
+    background: var(--black);
     position: absolute;
-    top: 50px;
-    left: 50px;
+    top: 71px;
+    left: 0px;
+    width: 100%;
+    list-style: none;
+
+}
+
+div.nav-list ul {
+    list-style: none;
+    display: block;
+    margin: 10px auto;
+    background: var(--black);
+    padding: 0;
+    text-align: center;
+}
+
+div.nav-list a {
+    font-size: 11.25px;
+    line-height: 1;
+    font-family: Montserrat-Bold;
+}
+
+div.nav-list p {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+div.nav-list div.sign-up-button {
+    display: block;
+    margin: 10px auto;
+    width: 107px;
+    font-size: 9px;
+    text-align: center;
+    background: #d80000;
+    padding: 7.5px 13.5px;
+    letter-spacing: 0.1em;
+    
 }
 
 @media (min-width:990px) {

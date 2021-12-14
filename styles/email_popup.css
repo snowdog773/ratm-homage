@@ -161,6 +161,8 @@ p.exclude-margin {
 
 .email-popup-footer p {
     margin: 0;
+    padding-left: 40px;
+    padding-right: 40px;
     font-weight: 700;
     font-size: 11.2px;
 }
