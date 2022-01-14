@@ -25,6 +25,11 @@
     src: url(/fonts/Roboto-Regular.ttf);
 }
 
+@font-face {
+    font-family: veteran-typewriter;
+    src: url(/fonts/veteran-typewriter.ttf)
+}
+
 html {
     font-family: montserrat;
     font-size: 14px;
@@ -155,6 +160,124 @@ div.nav-list div.sign-up-button {
     padding: 7.5px 13.5px;
     letter-spacing: 0.1em;
     
+}
+
+main section.thy-name {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+main section.thy-name img {
+    width: 100%;
+    position: relative;
+    z-index: -2;
+}
+
+main section.thy-name::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    content: "";
+    z-index: 1;
+    background: url(/assets/texturetop.png);
+    background-position: center top;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 45px;
+}
+
+main section div.white-border {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background: #ffffff;
+    width: 100%;
+    height: 13px;
+}
+
+main section.news {
+    position: relative;
+}
+
+main section.news h2 {
+    color: #000;
+    font-size: 27px;
+    font-family: veteran-typewriter;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 0.2em;
+    margin-top: 31px;
+    margin-bottom: 50px;
+}
+
+main section.news div.tour-news {
+    width: 91%;
+    margin: 0 auto;
+    box-shadow: 3px 5px 20px 0 rgb(0 0 0 / 14%);
+    padding: 8px;
+}
+
+main section.news div.tour-news img {
+    width: 100%;
+}
+
+main section.news div.tour-news h3 {
+    color: #000;
+    text-align: center;
+    font-family: montserrat-bold;
+    font-weight: bold;
+    font-size: 11.25px;
+    line-height: 1.467;
+}
+
+main section.news div.tour-news h3::after {
+    display: block;
+    content: "";
+    background: #d80000;
+    height: 3px;
+    width: 50px;
+    margin: 18.75px auto 0;
+}
+
+main section.news div.more-news-button {
+    display: block;
+    margin: 67.5px auto 75px;
+    text-align: center;
+    font-family: montserrat-bold;
+    font-weight: 700;
+    color: #ffffff;
+
+}
+
+
+main section.news div.more-news-button a {
+    letter-spacing: 0.1em;
+    text-indent: 0.05em;
+    font-size: 10.5px;
+    border: 2px;
+    border-style: solid;
+    border-color: #000000;
+    background: #000000;
+    padding: 9px 13.5px;
+}
+
+main section.videos::before {
+    display: block;
+    /* position: absolute; */
+    /* bottom: -45px; */
+    content: "";
+    z-index: 1;
+    background: url(/assets/texturebottom.png);
+    background-position: center top;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 45px;
+}
+
+main section.videos {
+    height: 200px;
+    background: #000000;
 }
 
 @media (min-width:990px) {
